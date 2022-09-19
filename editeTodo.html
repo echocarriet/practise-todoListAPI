@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/all.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <title>後台|代辦清單</title>
+</head>
+
+<body class="bg-warning-gradient">
+  <div class="d-flex min-vh-100 py-8">
+    <section class="container">
+      <div class="row mb-4 mb-md-8">
+        <div class="col-7">
+          <div class="d-flex">
+            <img class="img-fluid me-1" src="./images/onlineIcon.png" alt="ONLINE TODO LIST ICON">
+            <p class="h3 fw-bold ff-Baloo mb-0">ONLINE TODO LIST</p>
+          </div>
+        </div>
+        <div class="col-5">
+          <ul class="d-flex justify-content-end list-unstyled mb-0">
+            <li class="js-listUserName fw-bold pe-6"></li>
+            <li>
+              <a class="text-decoration-none text-dark d-block js-logOutBtn" href="#">登出</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 內容 -->
+      <div class="row justify-content-center">
+        <div class="col-8 mb-4">
+          <div class="formInput-group w-100">
+            <input class="formInput-group-input w-100 js-addText" type="text" placeholder="新增代辦事項">
+            <button class="formInput-group-button d-block js-addTodosBtn" type="button">
+              <i class="bi bi-plus-lg text-white h3"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="bg-white rounded-3 shadow">
+            <ul class="tabList">
+              <li class="tabList-item">
+                <a class="tabList-link active" href="#" data-status="all">全部</a>
+              </li>
+              <li class="tabList-item">
+                <a class="tabList-link" href="#" data-status="todo">待完成</a>
+              </li>
+              <li class="tabList-item">
+                <a class="tabList-link" href="#" data-status="done">已完成</a>
+              </li>
+            </ul>
+            <!-- 項目 -->
+            <div class="listItem">
+              <ul class="listItem-group">
+              </ul>
+              <div class="listItem-footer">
+                <p class="listItem-footer-todo">? 個待完成項目</p>
+                <a class="listItem-footer-button" href="#">清除已完成項目</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+  <!-- Axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <script src="js/editeTodo.js"></script>
+</body>
+
+</html>

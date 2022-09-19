@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@700&family=Noto+Sans+TC:wght@400;500;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+@import '../node_modules/bootstrap/scss/functions';
+@import './helpers/variables';
+@import '../node_modules/bootstrap/scss/maps';
+@import '../node_modules/bootstrap/scss/mixins';
+@import './helpers/utilities';
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/utilities/api";
+@import "./helpers/custom";

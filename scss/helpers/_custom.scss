@@ -1,0 +1,153 @@
+.ff-Baloo {
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+.bg-warning-gradient {
+  min-height: 100vh;
+  // display: flex;
+  background: linear-gradient(174deg,
+      $warning 2%,
+      $warning 46%,
+      $white 46%,
+      $white 100%,
+    );
+}
+
+// Tab
+.tabList {
+  display: flex;
+  list-style: none;
+  padding-left: 0px;
+
+  &-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  &-link {
+    padding: 16px 0;
+    color: $dark;
+    text-decoration: none;
+    display: block;
+    border-bottom: 2px solid $gray-250;
+
+    &.active {
+      border-bottom: 2px solid $dark;
+    }
+
+    &:hover {
+      color: $dark;
+      border-bottom: 2px solid $dark;
+    }
+  }
+}
+
+.formInput-group {
+  display: flex;
+  align-items: center;
+  background: $white;
+  border-radius: 10px;
+  padding: 0 4px 0 16px;
+
+  &-input {
+    height: 47px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+
+    &::placeholder {
+      font-size: 16px;
+      color: $gray-600;
+    }
+  }
+
+  &-button {
+    width: 40px;
+    height: 39px;
+    background: $gray-900;
+    border: none;
+    border-radius: 10px;
+  }
+}
+
+.listItem {
+  font-size: 14px;
+  padding: 6px 17px 32px 24px;
+
+  &-group {
+    list-style: none;
+    padding-left: 0;
+
+    &-item {
+      display: flex;
+      align-items: center;
+    }
+
+    &-check {
+      position: relative;
+      padding: 15px 0 15px 36px;
+      border-bottom: 1px solid $gray-250;
+
+      & input {
+        position: absolute;
+        cursor: pointer;
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+
+      & input:checked~.checkedIcon {
+        border: 1px solid transparent;
+      }
+
+      & .checkedIcon {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $gray-600;
+        border-radius: 5px;
+        left: 0;
+      }
+
+      & .checkedIcon:after {
+        display: none;
+        position: absolute;
+        content: "";
+      }
+
+      & input:checked~.checkedIcon:after {
+        font-family: 'bootstrap-icons';
+        content: '\F633';
+        display: block;
+        left: 0;
+        top: -5px;
+        color: $warning;
+        font-size: $h4-font-size;
+      }
+    }
+
+    &-deleteBtn {
+      color: $gray-900;
+      padding-left: 16px;
+
+      &:hover {
+        color: $warning;
+      }
+    }
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+
+    &-button {
+      text-decoration: none;
+      color: $gray-600;
+
+      &:hover {
+        color: $warning;
+      }
+    }
+  }
+}

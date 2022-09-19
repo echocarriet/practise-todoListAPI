@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/all.css">
+  <title>To Do List </title>
+</head>
+
+<body>
+  <div class="bg-warning d-flex min-vh-100 py-8">
+    <!-- 註冊 -->
+    <section class="container qs-signInContainer">
+      <div class="row align-items-center align-content-center h-100">
+        <div class="col-md-6">
+          <div class="d-flex justify-content-center align-items-center mb-5">
+            <img class="img-fluid me-1" src="./images/onlineIcon.png" alt="ONLINE TODO LIST ICON">
+            <p class="h2 fw-bold ff-Baloo mb-0">ONLINE TODO LIST</p>
+          </div>
+          <img class="img-fluid d-none d-md-block mx-auto" src="./images/indexImage.png" alt="ONLINE TODO LIST 圖片">
+        </div>
+        <div class="col-md-6">
+          <h2 class="h3 fw-bold mb-6 text-center text-md-start">註冊帳號</h2>
+          <form class="mb-6 js-signInForm">
+            <div class="mb-4">
+              <label for="formEmailSignIn" class="form-label fw-bold mb-1">Email</label>
+              <input type="email" class="form-control px-3 py-4 js-formEmail" id="formEmailSignIn" placeholder="請輸入 Email" required>
+            </div>
+            <div class="mb-4">
+              <label for="formName" class="form-label fw-bold mb-1">您的暱稱</label>
+              <input type="text" class="form-control px-3 py-4 js-formName" id="formName" placeholder="請輸入您的暱稱" required>
+            </div>
+            <div class="mb-4">
+              <label for="formPasswordSignIn" class="form-label fw-bold mb-1">密碼</label>
+              <input type="password" class="form-control px-3 py-4 js-formPassword" id="formPasswordSignIn" placeholder="請輸入密碼" required>
+            </div>
+            <div class="mb-6">
+              <label for="formPasswordCheck" class="form-label fw-bold mb-1">再次輸入密碼</label>
+              <input type="password" class="form-control px-3 py-4 js-formPasswordCheck" id="formPasswordCheck" placeholder="請再次輸入密碼" required>
+              <span class="passwordError text-danger"></span>
+            </div>
+            <div class="error-mes mb-6 text-danger"></div>
+            <button type="submit" class="btn btn-dark px-8 py-3 d-block mx-auto js-signInBtn">註冊帳號</button>
+          </form>
+          <a href="#" class="text-center d-block text-dark text-decoration-none fw-bold js-LogInToggle">登入</a>
+        </div>
+      </div>
+    </section>
+    <!-- 登入 -->
+    <section class="container qs-logInContainer d-none">
+      <div class="row align-items-center align-content-center h-100">
+        <div class="col-md-6">
+          <div class="d-flex justify-content-center align-items-center mb-5">
+            <img class="img-fluid me-1" src="./images/onlineIcon.png" alt="ONLINE TODO LIST ICON">
+            <p class="h2 fw-bold ff-Baloo mb-0">ONLINE TODO LIST</p>
+          </div>
+          <img class="img-fluid d-none d-md-block mx-auto" src="./images/indexImage.png" alt="ONLINE TODO LIST 圖片">
+        </div>
+        <div class="col-md-6">
+          <div class="px-0 px-lg-7">
+            <h2 class="h3 fw-bold mb-6 text-center text-md-start">最實用的線上待辦事項服務</h2>
+            <form class="mb-6 logInForm">
+              <div class="mb-4">
+                <label for="forEmailLogIn" class="form-label fw-bold mb-1">Email</label>
+                <input type="email" class="form-control px-3 py-4 js-logInEmail" id="formEmailLogIn" placeholder="請輸入 Email">
+              </div>
+              <div class="mb-4">
+                <label for="formPasswordLogIn" class="form-label fw-bold mb-1">密碼</label>
+                <input type="password" class="form-control px-3 py-4 js-logInPassword" id="formPasswordLogIn" placeholder="請輸入密碼">
+              </div>
+              <div class="error-mes mb-4 text-danger"></div>
+              <button type="submit" class="btn btn-dark px-8 py-3 d-block mx-auto logInBtn">登入</button>
+            </form>
+            <a href="#" class="text-center d-block text-dark text-decoration-none fw-bold js-SignInToggle">註冊帳號</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 代辦管理 -->
+    <section class="container qs-editListContainer d-none">
+      <p>代辦管理</p>
+    </section>
+  </div>
+
+  <!-- Axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <script src="js/all.js"></script>
+</body>
+
+</html>
